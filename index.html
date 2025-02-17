@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модальне вікно</title>
+    <style>
+        .beckgdrop {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-box {
+            margin: 15% auto;
+            padding: 20px;
+            background-color: white;
+            width: 80%;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <button data-action="open-modal">Відкрити модальне вікно</button>
+
+<div class="beckgdrop" data-action="modal">
+    <div class="modal-box">
+        <h2>Це модальне вікно!</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quam perspiciatis eligendi similique corrupti amet quas? Aperiam, delectus ex nam doloremque voluptatum dicta omnis a totam ea dolor saepe nulla.</p>
+        <button data-action="close-modal">Закрити</button>
+    </div>
+</div>
+ <div>
+    <h1>Виберіть колір фону:</h1>
+    <label>
+        <input type="radio" name="color" value="red"> Red
+    </label>
+    <label>
+        <input type="radio" name="color" value="green"> Green
+    </label>
+    <label>
+        <input type="radio" name="color" value="blue"> Blue
+    </label>
+
+
+    <input type="text" id="name-input" placeholder="Введіть текст" maxlength="6">
+    <span id="name-output">незнайомець</span>
+
+    <input type="range" id="font-size-control" min="10" max="100" value="16">
+    <span id="text">Змінюй мій розмір тексту!</span>
+</div>
+   <script src="./script.js"></script>
+</body>
+</html>
